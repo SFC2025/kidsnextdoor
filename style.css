@@ -816,9 +816,11 @@ nav a:hover {
   }
 
   .filtros {
-    justify-content: flex-start;
+    display: flex;
+    gap: 0.8rem;
     flex-wrap: nowrap;
     min-width: max-content;
+    justify-content: flex-start;
   }
 
   .filtros::-webkit-scrollbar {
