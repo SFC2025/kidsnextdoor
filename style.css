@@ -795,3 +795,34 @@ nav a:hover {
   }
 }
 
+.filtros-scroll {
+  overflow-x: auto;
+  padding: 0 1rem;
+  -webkit-overflow-scrolling: touch;
+}
+
+.filtros {
+  display: flex;
+  gap: 0.8rem;
+  justify-content: center; /* ← centrado en PC */
+  flex-wrap: wrap;
+}
+
+@media (max-width: 600px) {
+  .filtros-scroll {
+    overflow-x: auto;
+    padding: 0 1rem;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  .filtros {
+    justify-content: flex-start;
+    flex-wrap: nowrap;
+    min-width: max-content;
+  }
+
+  .filtros::-webkit-scrollbar {
+    display: none;
+  }
+}
+
