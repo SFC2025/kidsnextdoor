@@ -771,3 +771,32 @@ nav a:hover {
   line-height: 1.6;
 }
 
+/* Título principal adaptativo a celular */
+.titulo-knd {
+  display: inline;
+  white-space: nowrap;
+}
+
+@media (max-width: 480px) {
+  .titulo-knd {
+    display: block;
+    white-space: normal;
+    line-height: 1.2;
+  }
+}
+
+@media (max-width: 400px) {
+  .cta-principal {
+    font-size: 0.85rem;
+    padding: 0.4rem 0.8rem;
+    max-width: 90%;
+    white-space: normal;
+    word-wrap: break-word;
+    line-height: 1.2;
+  }
+
+  .hero-content {
+    padding: 0 1rem;
+  }
+}
+
