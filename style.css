@@ -65,6 +65,10 @@ header {
   transform: translate(-50%, -50%);
   color: white;
   text-align: center;
+  padding: 0 1.2rem;
+  width: 100%;
+  max-width: 500px;
+  box-sizing: border-box;
 }
 
 .hero-content h1 {
@@ -416,25 +420,6 @@ section h2 {
   text-align: center;
 }
 
-@media (max-width: 500px) {
-  .grid {
-    grid-template-columns: 1fr;
-  }
-
-  .cta-principal {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-  }
-
-  .hero-content h1 {
-    font-size: 2rem;
-  }
-
-  .hero-content p {
-    font-size: 1rem;
-  }
-}
-
 nav {
   position: sticky;
   top: 0;
@@ -479,25 +464,6 @@ nav a:hover {
 .cta-principal:hover {
   background: #0056b3;
   box-shadow: 0 6px 12px rgba(0, 123, 255, 0.3);
-}
-
-@media (max-width: 500px) {
-  .cta-principal {
-    font-size: 0.95rem;
-    padding: 0.5rem 1rem;
-  }
-
- .hero-content h1 {
-  font-size: 3rem;
-  margin-bottom: 0.5rem;
-  opacity: 0;
-  animation: fadeInDown 1s ease-out forwards;
-  animation-delay: 0.3s;
-}
-
-  .hero-content p {
-    font-size: 1rem;
-  }
 }
 
 #loader {
@@ -773,16 +739,12 @@ nav a:hover {
 
 /* Título principal adaptativo a celular */
 .titulo-knd {
-  display: inline;
-  white-space: nowrap;
-}
-
-@media (max-width: 480px) {
-  .titulo-knd {
-    display: block;
-    white-space: normal;
-    line-height: 1.2;
-  }
+  display: block;
+  font-size: 2.4rem;
+  line-height: 1.1;
+  word-break: break-word;
+  white-space: normal;
+  text-wrap: balance;
 }
 
 @media (max-width: 400px) {
@@ -794,9 +756,42 @@ nav a:hover {
     word-wrap: break-word;
     line-height: 1.2;
   }
+}
+
+@media (max-width: 500px) {
+  .grid {
+    grid-template-columns: 1fr;
+  }
+
+  .cta-principal {
+    font-size: 0.95rem;
+    padding: 0.5rem 1rem;
+    max-width: 90%;
+    word-break: break-word;
+    line-height: 1.2;
+  }
 
   .hero-content {
+    padding: 0 1.2rem;
+  }
+
+  .hero-content h1 {
+    font-size: 2.2rem;
+    margin-bottom: 0.5rem;
+    animation: fadeInDown 1s ease-out forwards;
+    animation-delay: 0.3s;
+  }
+
+  .hero-content p {
+    font-size: 1rem;
+    line-height: 1.4;
+  }
+
+  .titulo-knd {
+    font-size: 2rem;
     padding: 0 1rem;
+    white-space: normal;
+    line-height: 1.2;
   }
 }
 
